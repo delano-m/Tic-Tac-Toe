@@ -31,9 +31,9 @@ function boxClicked(e) {
         if (winning_blocks !== false) {
             // change the tic tac toe text above
             playerText.innerText = `${currentPlayer} has won!`
-            winning_blocks.map(box => boxes[box].style.backgroundColor = winnerIndicator)
+            // winning_blocks.map(box => boxes[box].style.backgroundColor = winnerIndicator)
             // use keyframes
-            // winning_blocks.forEach(box => boxes[box].classList.add('winning-box'))
+            winning_blocks.forEach(box => boxes[box].classList.add('winning-box'))
             boxes.forEach(box => box.removeEventListener('click', boxClicked))
             return
         }

@@ -9,8 +9,8 @@
     --winning-blocks: #2d414b;
 }
 
-/* Define the keyframes for the slicing animation
-@keyframes hover {
+/* Define the keyframes for the slicing animation */
+@keyframes slice {
     0% {
       clip-path: inset(0% 0% 0% 0%);
     }
@@ -20,11 +20,12 @@
     100% {
       clip-path: inset(0% 50% 0% 50%);
     }
-} */
+}
   
   /* Add a class for the winning boxes */
 .winning-box {
-    animation: slice 1s forwards;
+    /* animation: slice 1s forwards; */
+    transform: translate3d(10px, 10px, 10px);
     background-color: var(--winning-blocks); /* Use the winning color */
 }
 
@@ -63,18 +64,17 @@ h1 {
     justify-content: center;
     color: var(--orange);
     font-size: 100px;
-    border-right: 2px solid;
-    border-bottom: 2px solid;
+    border: 2px solid;
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
-.box:nth-child(3n) {
+/* .box:nth-child(3n) {
     border-right: none;
 }
 
 .box:nth-child(6) ~ .box {
     border-bottom: none;
-} 
+}  */
 
 button {
     padding: 10px 20px;
@@ -94,5 +94,5 @@ button:hover {
 
 .box:hover {
     cursor: pointer;
-    background-color: rgba(127, 98, 49, 0.209);
+    background-color: rgb(127, 98, 49);
 }
