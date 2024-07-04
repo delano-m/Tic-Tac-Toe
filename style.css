@@ -65,6 +65,7 @@ h1 {
     color: var(--orange);
     font-size: 100px;
     border: 2px solid;
+    box-shadow: 0 0 0 2px;
     transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
@@ -88,6 +89,7 @@ button {
 }
 
 button:hover {
+    /* This will show a pointer to indicate clickable */
     cursor: pointer;
     transform: translateY(-2px);
 }
